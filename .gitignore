@@ -1,0 +1,5 @@
+*/**.mp4
+*/.vscode
+*/node_modules
+.idea
+
