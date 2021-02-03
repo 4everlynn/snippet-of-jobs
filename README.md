@@ -4,7 +4,7 @@
 
 ## JOBS'S LESSON PLAN
 - [x] [TESSERACT.js (OCR)](https://www.bilibili.com/video/BV1v54y1z7dp)
-- [ ] PINYIN (汉语拼音标注)
+- [ ] RstfulTemplate impl. (WIP)
 - [ ] MORE...
 
 有关代码任何问题欢迎在 github 的 issue 中提出～
