@@ -1,0 +1,24 @@
+version: '3'
+services:
+  code-server:
+    image: easy-coder-server
+    hostname: coder-server
+    container_name: coder-server
+    volumes:
+      - "./data/projects:/root/projects"
+      - "./data/local:/root/.local"
+      - "./data/config:/root/.config"
+    environment:
+      PASSWORD: ${PASSWORD}
+      DOCKER_USER: ${CODER_USER}
+    restart: always
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 3000:80
+    volumes:
+      - "./conf/nginx/conf.d:/etc/nginx/conf.d"
+      - "./conf/nginx/nginx.conf:/etc/nginx/nginx.conf"
+    depends_on:
+      - code-server
